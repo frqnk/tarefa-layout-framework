@@ -1,0 +1,160 @@
+/*
+	# PALETA DE CORES
+	https://www.color-hex.com/color-palette/99648
+
+	# FAMÍLIA TIPOGRÁFICA
+	https://fonts.google.com/specimen/Crimson+Pro
+
+	# IMAGENS
+	https://commons.wikimedia.org/wiki/File:Globo_terraqueo_3.gif
+	https://commons.wikimedia.org/wiki/File:Cicero.PNG
+
+	# TEXTOS
+	https://la.wikipedia.org/wiki/Marcus_Tullius_Cicero
+	https://pt.wikipedia.org/wiki/Batalha_das_Term%C3%B3pilas
+	https://translate.google.com.br/
+	https://www.lipsum.com/
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro');
+
+:root {
+	--palette-color-01: #eeeac4;
+	--palette-color-02: #c9c6b3;
+	--palette-color-03: #90a1a3;
+	--palette-color-04: #556e78;
+	--palette-color-05: #1b4458;
+
+	--fg-color: white;
+	--bg-color-1: var(--palette-color-05);
+	--bg-color-2: var(--palette-color-04);
+	--color-tint-1: var(--palette-color-01);
+	--color-tint-2: var(--palette-color-02);
+	--color-tint-3: var(--palette-color-03);
+
+	font-family: 'Crimson Pro', serif;
+	font-size: 15pt;
+	color: var(--fg-color);
+	background-color: var(--bg-color-1);
+
+	--navbar-spacing: 0.2em;
+}
+
+.fg-color {color: var(--fg-color);}
+.bg-color-1 {background-color: var(--bg-color-1);}
+.bg-color-2 {background-color: var(--bg-color-2);}
+.bg-darker {background-color: rgba(0, 0, 0, 0.2);}
+.color-tint-1 {color: var(--color-tint-1);}
+.color-tint-2 {color: var(--color-tint-2);}
+.color-tint-3 {color: var(--color-tint-3);}
+
+.inline {display: inline;}
+.inline-block {display: inline-block;}
+.block {display: block;}
+
+.relative-position {position: relative;}
+.float-left {float: left;}
+.float-right {float: right;}
+
+.width-80 {width: 80%;}
+.width-100 {width: 100%;}
+.width-auto {width: auto;}
+.height-auto {height: auto;}
+.margin-0 {margin: 0;}
+.margin-auto {margin: auto;}
+
+.txt-center {text-align: center;}
+.txt-justify {text-align: justify;}
+.txt-indent {text-indent: 2em;}
+.lighter-font {font-weight: lighter;}
+
+.x-invert {transform: scaleX(-1);}
+.stick-to-top {position: sticky; top: 0;}
+.clear-hack::after {content: ""; clear: both; display: table;}
+
+.anchor {
+	position: relative;
+	top: calc((1.2em + 1px + 1.5 * 0.83em) * -1);
+}
+
+header {
+	padding: 2em 0;
+}
+
+nav {
+	border-bottom: 1px solid var(--color-tint-3);
+	box-shadow: 0 0.2em 0.2em rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+	padding: var(--navbar-spacing) 0;
+	list-style-type: none;
+	background-color: var(--bg-color-2);
+}
+
+nav li {
+	display: inline-block;
+	margin: var(--navbar-spacing);
+}
+
+nav a {
+	display: block;
+	padding: var(--navbar-spacing) calc(var(--navbar-spacing) + 0.5em);
+	border-radius: calc(var(--navbar-spacing) + 0.5em);
+	transition: all 0.2s ease;
+}
+
+nav a:link,
+nav a:visited {
+	text-decoration: none;
+	color: var(--fg-color);
+	outline: solid 1px var(--color-tint-3);
+}
+
+nav a:hover,
+nav a:active {
+	text-decoration: none;
+	color: var(--fg-color);
+	background-color: var(--color-tint-3);
+}
+
+section {
+	width: 80%;
+	margin: auto;
+}
+
+article {
+	text-align: justify;
+	text-indent: 2em;
+}
+
+#cicero_element img {
+	max-width: calc(100% - 1em * 2);
+	max-height: calc(100% - 1em * 2);
+	margin: 1em;
+}
+
+#tigas-et-300_element iframe {
+	max-width: 100%;
+	margin: 0 1em 1em 0;
+}
+
+#tigas-et-300_element article {
+	padding: 1em 0;
+	margin: 0 10%;
+}
+
+#lorem-ipsum_element article {
+	float: left;
+	width: calc(50% - 0.5em);
+}
+
+#lorem-ipsum_element article:nth-of-type(odd) {
+	margin: 0 1em 0 0;
+}
+
+footer {
+	margin-top: 1em;
+	padding: 1em 0;
+	font-size: 0.9em;
+}
